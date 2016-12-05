@@ -14,6 +14,6 @@
 
 .copyright {
     text-align: right;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(0, 0, 0, .12);
     padding-top: 1.5em;
 }
