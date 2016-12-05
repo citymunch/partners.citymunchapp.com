@@ -1,0 +1,19 @@
+.article .wrapper {
+    padding-top: 86px;
+}
+
+@media only screen and (min-width: 720px) {
+    .article .wrapper {
+        padding-top: 88px;
+    }
+}
+
+.article h1 {
+    padding-bottom: 20px;
+}
+
+.copyright {
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 1.5em;
+}

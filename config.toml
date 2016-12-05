@@ -1,0 +1,63 @@
+baseurl = "https://partners.citymunchapp.com/"
+title = "CityMunch Partner API"
+languageCode = "en-us"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+
+[params]
+    author = "CityMunch Ltd."
+    description = "The CityMunch API lets you put hundreds of discounts at top restaurants, cafes and delis into your website, app or other business offering."
+    logo = "favicon.png"
+    favicon = "favicon.png"
+    globalTitle = "CityMunch Partner API"
+
+    permalink = "#"
+
+    # Custom assets
+    custom_css = []
+    custom_js  = []
+
+    # Syntax highlighting theme
+    highlight_css  = ""
+
+    [params.palette]
+        primary = "red"
+        accent  = "teal"
+
+    [params.font]
+        text = "Ubuntu"
+        code = "Ubuntu Mono"
+
+
+[social]
+    twitter = "CityMunch"
+    github  = "CityMunch"
+    email   = "info@citymunchapp.com"
+
+
+[[menu.main]]
+    name   = "Welcome"
+    url    = "/"
+    weight = 0
+
+[[menu.main]]
+    name   = "Getting started"
+    url    = "/getting-started/"
+    weight = 10
+
+[[menu.main]]
+    name   = "Documentation"
+    url    = "/documentation/"
+    weight = 20
+
+[[menu.main]]
+    name   = "Changelog"
+    url    = "/changelog/"
+    weight = 30
+
+[blackfriday]
+    smartypants = true
+    fractions = true
+    smartDashes = true
+    plainIDAnchors = true
