@@ -5,14 +5,18 @@ weight: 10
 
 ## Are you a business? Contact us to discuss
 
-First, together let's figure out what you want to do and how we can help you.
+Anyone looking to offer eating out deals to their users in London and/or Bristol, please get in touch! Examples of the kinds of firms we partner with are:
 
-Email us at [info@citymunchapp.com](mailto:info@citymunchapp.com) and let us know:
+* Large corporates looking to reward employees
+* Specialist employee benefits providers
+* Banks looking to reward customers
 
-* what is your business?
-* how do you want to use the CityMunch API?
+Whether you fit one of these categories or not, let's discuss how we can help. Email us at [info@citymunchapp.com](mailto:info@citymunchapp.com) and we'll get back to you as soon as we can.
 
-## Are you a hobbyist? Just start hacking
+## Are you a developer?
 
 Jump straight to the [documentation]({{< relref "documentation.md" >}})
 or [API request/response formats](https://prod-api.citymunchapp.com/swagger-ui.html).
+
+Before going live, please make sure you adhere to our
+[terms and conditions]({{< relref "terms.md" >}}).

@@ -56,6 +56,11 @@ canonifyurls = true
     url    = "/changelog/"
     weight = 30
 
+[[menu.main]]
+    name   = "Terms"
+    url    = "/terms/"
+    weight = 40
+
 [blackfriday]
     smartypants = true
     fractions = true

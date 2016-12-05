@@ -25,7 +25,7 @@ Our API endpoints and models are documented with [Swagger](http://swagger.io/).
 
 Our production Swagger page is at [prod-api.citymunchapp.com/swagger-ui.html](https://prod-api.citymunchapp.com/swagger-ui.html)
 
-The UAT (test environment) Swagger page is at [uat-api.citymunchapp.com/swagger-ui.html](https://prod-api.citymunchapp.com/swagger-ui.html)
+The UAT (test environment) Swagger page is at [uat-api.citymunchapp.com/swagger-ui.html](https://uat-api.citymunchapp.com/swagger-ui.html)
 
 From there, you can view every endpoint, the request format and the response format.
 For example, if you click on "Authentication" and then click `POST /authentication/login`, you will
@@ -46,7 +46,7 @@ or **RESTAURANT_STAFF** (a user who works for a restaurant).
 establishment.
 
 **Offer**: A percent-off-the-food-bill offering from a restaurant, for example
-"20% off at restaurant X between 1pm and 3pm" is an off.
+"20% off at restaurant X between 1pm and 3pm" is an offer.
 
 **Offer occurrence**: An offer on a specific day. For example if an offer repeats on Mondays,
 Tuesdays and Fridays, then an occurrence would be 5 December 2016, as would 6 January 2017. An
