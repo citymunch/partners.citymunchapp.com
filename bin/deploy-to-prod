@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Usage: bin/deploy-to-prod
+
+set -o nounset
+set -o errexit
+
+hugo
+rsync -raz --chown=citymunch:citymunch public/ cm-dev:/home/citymunch/project/partners.citymunchapp.com/
