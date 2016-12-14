@@ -64,6 +64,12 @@ All requests must have a `X-CM-MaxVersionSupported` header, which indicates what
 your client supports. See the [changelog]({{< relref "getting-started.md" >}}). The newest API
 version is **3**, so new clients should start with `X-CM-MaxVersionSupported: 3`.
 
+Non-partner developers may simply call the API without identifying their client.
+
+Partner developers must should an `Authorization` header with the value
+`Authorization: Partner [API_KEY]`. Your API key can be retrieved from your partner portal. If your
+API key becomes compromised, you must notify us immediately so we can blacklist it.
+
 After a user has logged in via your client, you will be given the a user ID and authentication token
 that uniquely identify the user. Send the headers `X-CM-UserId: (USER_ID)` and
 `X-CM-AuthToken: (AUTH_TOKEN)` with all requests after the user has logged in.

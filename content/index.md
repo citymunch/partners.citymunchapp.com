@@ -16,5 +16,6 @@ Want to see it in action? Download our [iOS](https://itunes.apple.com/gb/app/cit
 <img src="/images/consumer-mobile-apps.jpg" />
 
 **Not a developer?** You might have found this page by accident.
+If you are a partner, our partner portal is [here](https://citymunch-merchant.com/).
 If you are a merchant, our merchant app is at [citymunch-merchant.com](https://citymunch-merchant.com/).
 If you are looking for food deals, our marketing site is at [citymunchapp.com](http://citymunchapp.com/).
