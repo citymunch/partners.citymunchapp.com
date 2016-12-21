@@ -19,3 +19,7 @@ has a name string and ID string.
 ## `X-CM-MaxVersionSupported: 3`
 
 The field `offerInfo` in offer objects has been renamed to `occurrences`.
+
+## `X-CM-MaxVersionSupported: 4`
+
+The fields `geoPosition` and `gpsCoordinates` (they were the same) in restaurants objects have been renamed/combined into `geoPoint`.
