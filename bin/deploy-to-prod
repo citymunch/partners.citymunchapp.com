@@ -6,4 +6,4 @@ set -o nounset
 set -o errexit
 
 hugo
-rsync -raz --chown=citymunch:citymunch public/ cm-dev:/home/citymunch/project/partners.citymunchapp.com/
+rsync -raz public/ cm-static-sites:/var/www/partners.citymunchapp.com/
