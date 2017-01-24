@@ -33,7 +33,7 @@ canonifyurls = true
 [social]
     twitter = "CityMunch"
     github  = "CityMunch"
-    email   = "info@citymunchapp.com"
+    email   = "partners@citymunchapp.com"
 
 
 [[menu.main]]

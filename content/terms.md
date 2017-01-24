@@ -3,7 +3,7 @@ title: Terms & Conditions
 weight: 40
 ---
 
-Available on request -- email us at [info@citymunchapp.com](mailto:info@citymunchapp.com).
+Available on request -- email us at [partners@citymunchapp.com](mailto:partners@citymunchapp.com).
 
 Basically though:
 

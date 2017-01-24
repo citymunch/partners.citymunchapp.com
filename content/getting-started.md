@@ -11,7 +11,7 @@ Anyone looking to offer eating out deals to their users in London and/or Bristol
 * Specialist employee benefits providers
 * Banks looking to reward customers
 
-Whether you fit one of these categories or not, let's discuss how we can help. Email us at [info@citymunchapp.com](mailto:info@citymunchapp.com) and we'll get back to you as soon as we can.
+Whether you fit one of these categories or not, let's discuss how we can help. Email us at [partners@citymunchapp.com](mailto:partners@citymunchapp.com) and we'll get back to you as soon as we can.
 
 ## Are you a developer?
 

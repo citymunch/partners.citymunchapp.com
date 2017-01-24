@@ -81,4 +81,4 @@ longer logged in, which may happen if, for example, they deactivate their accoun
 
 ## Support
 
-For technical support, email [amy@citymunchapp.com](amy@citymunchapp.com).
+For technical support, email [partners@citymunchapp.com](mailto:partners@citymunchapp.com).
