@@ -37,3 +37,12 @@ start and end time, instead of `offer.startTime` and `offer.endTime`.
 After a voucher has been reserved, it's time range can be expanded, not reduced, so existing
 clients will continue to work with API v4 and below, but the voucher times will not always be
 correct.
+
+## `X-CM-MaxVersionSupported: 6`
+
+The offer fields `isActive`, `isRemoved`, and `isSuspended` have been merged into a single field
+called `status`. The valid status values are `INACTIVE_BY_DEFAULT`, `ACTIVE_BY_DEFAULT`, `SUSPENDED`
+and `DELETED`.
+
+The restaurant fields `isAuthorised` and `isDeleted` have been merged into a single field called
+`status`. The valid status values are `UNAUTHORISED`, `AUTHORISED` and `DELETED`.
