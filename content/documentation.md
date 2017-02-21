@@ -40,7 +40,7 @@ to auto-generate code in your favourite language, using a tool like
 
 **User**: a person who has an involvment with CityMunch. Each user has a **role**, which describes
 what type of user they are. The role may be **CONSUMER** (a user who can reserve and redeem vouchers)
-or **RESTAURANT_STAFF** (a user who works for a restaurant).
+or **MERCHANT** (a user who works for a restaurant).
 
 **Restaurant**: A food place, which could be a restaurant, cafe, deli, street van, or other type of
 establishment.
