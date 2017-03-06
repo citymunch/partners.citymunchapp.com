@@ -56,6 +56,9 @@ gets busy on the occurrence date).
 
 **Voucher**: When a user has decided they want to take advantage of an offer, they reserve a voucher.
 
+**Gold bonus**: Allows a user to boost their voucher discounts by an extra 5%. Branded within
+CityMunch as "MunchCoins".
+
 ## HTTP headers
 
 ### Requests

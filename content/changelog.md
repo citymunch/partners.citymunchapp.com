@@ -46,3 +46,13 @@ and `DELETED`.
 
 The restaurant fields `isAuthorised` and `isDeleted` have been merged into a single field called
 `status`. The valid status values are `UNAUTHORISED`, `AUTHORISED` and `DELETED`.
+
+## `X-CM-MaxVersionSupported: 7`
+
+Each offer now has a field `areGoldBonusesExcluded`. If this is true, gold bonuses (a.k.a. MunchCoins)
+cannot be used when reserving a voucher for the offer.
+
+Each offer now has a field `maximumCoversPerVoucher`. If this is non-null, voucher reservations may
+not be reserved with more than this number of covers.
+
+The offer field `lastDate` has been renamed to `endDate` to be consistent with other parts of the API.
