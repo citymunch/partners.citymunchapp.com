@@ -56,3 +56,38 @@ Each offer now has a field `maximumCoversPerVoucher`. If this is non-null, vouch
 not be reserved with more than this number of covers.
 
 The offer field `lastDate` has been renamed to `endDate` to be consistent with other parts of the API.
+
+## `X-CM-MaxVersionSupported: 8`
+
+This is a big release, with completely new voucher types!
+
+The endpoint `GET /users/search/referral-code/{code}` has been deprecated and moved to
+`GET /referral-codes/{code}`. The old endpoint will continue to check consumer referral codes only,
+while the new endpoint will check consumer referral codes and new types like blogger codes,
+restaurant-specific codes and marketing codes.
+
+The consumer registration endpoints now accept other types of referral codes (see above) in API v8.
+API v7 and below will continue to only accept consumer referral codes.
+
+Vouchers can now have different "types":
+
+* `PERCENT_OFF_ANY_FOOD_ON_DATE` - a traditional CityMunch voucher, with a `date`, `startTime`,
+    `endTime`, `offer` and `totalDiscount`.
+
+* `PERPETUAL_PERCENT_OFF_SPECIFIC_ITEM` - for example "20% off coffee until 31st December" - has the
+    new fields `itemName` and `expiresOnDate`, keeps the traditional field `totalDiscount`, but
+    does not have the traditional fields `date`, `offer`, `startTime` or `endTime`.
+
+* `PERPETUAL_SPECIFIC_ITEM_FOR_FREE` - for example "free coffee until 31st December" - has the new
+    fields `itemName` and `expiresOnDate`, but does not have the traditional fields `date`, `offer`,
+    `startTime`, `endTime` or `totalDiscount`.
+
+* `PERPETUAL_N_FOR_1` - for example "2 for 1 on any curry" - has the new fields `nFor1`, `itemName`
+    and `expiresOnDate`, but does not have the traditional fields `date`, `offer`, `startTime`,
+    `endTime` or `totalDiscount`.
+
+In API v7 and below, only vouchers with type `PERCENT_OFF_ANY_FOOD_ON_DATE` will be visible.
+
+The endpoint `/vouchers/search/own-active-or-recently-active` has been removed entirely.
+
+The endpoint `/vouchers/search/own-first-voucher` has been removed entirely.
