@@ -91,3 +91,8 @@ In API v7 and below, only vouchers with type `PERCENT_OFF_ANY_FOOD_ON_DATE` will
 The endpoint `/vouchers/search/own-active-or-recently-active` has been removed entirely.
 
 The endpoint `/vouchers/search/own-first-voucher` has been removed entirely.
+
+## `X-CM-MaxVersionSupported: 9`
+
+The structure of the endpoint `/restaurants/search/authorised-restaurants` has changed under
+the `allActiveOffers` key.
