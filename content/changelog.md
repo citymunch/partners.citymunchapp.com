@@ -96,3 +96,10 @@ The endpoint `/vouchers/search/own-first-voucher` has been removed entirely.
 
 The structure of the endpoint `/restaurants/search/authorised-restaurants` has changed under
 the `allActiveOffers` key.
+
+## `X-CM-MaxVersionSupported: 10`
+
+The restaurant field `cuisineType` field has been renamed to `primaryTag`, and a *new* `cuisineType`
+field has been added. A `businessType` field has also been added.
+
+In versions 9 and below, the restaurant's "primary tag" will continue to serialize as `cuisineType`.
