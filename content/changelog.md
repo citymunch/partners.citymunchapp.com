@@ -103,3 +103,9 @@ The restaurant field `cuisineType` field has been renamed to `primaryTag`, and a
 field has been added. A `businessType` field has also been added.
 
 In versions 9 and below, the restaurant's "primary tag" will continue to serialize as `cuisineType`.
+
+## `X-CM-MaxVersionSupported: 11`
+
+The voucher field `seatsReserved` field has been renamed to `coversReserved`.
+
+<!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->

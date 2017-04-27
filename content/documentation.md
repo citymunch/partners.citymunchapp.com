@@ -65,7 +65,7 @@ CityMunch as "MunchCoins".
 
 All requests must have a `X-CM-MaxVersionSupported` header, which indicates what version of the API
 your client supports. See the [changelog]({{< relref "getting-started.md" >}}). The newest API
-version is **3**, so new clients should start with `X-CM-MaxVersionSupported: 3`.
+version is **11**, so new clients should start with `X-CM-MaxVersionSupported: 11`.
 
 Non-partner developers may simply call the API without identifying their client.
 
