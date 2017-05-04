@@ -4,27 +4,27 @@ weight: 30
 ---
 
 This page lists the breaking changes that came with each API version change. API clients must send a
-header called `X-CM-MaxVersionSupported` with an integer value, indicating what version your client
-supports.
+header called `Accept` with a value in the format `application/vnd.citymunch.v123+json`, where `123`
+represents what version your client supports.
 
 This page doesn't list non-breaking changes, such as fields or endpoints being added.
 
 New API clients must be built using the latest API version.
 
-## `X-CM-MaxVersionSupported: 2`
+## `Accept: application/vnd.citymunch.v2+json`
 
 `/offer/search-hints` response has changed from arrays of strings to arrays of objects - each object
 has a name string and ID string.
 
-## `X-CM-MaxVersionSupported: 3`
+## `Accept: application/vnd.citymunch.v3+json`
 
 The field `offerInfo` in offer objects has been renamed to `occurrences`.
 
-## `X-CM-MaxVersionSupported: 4`
+## `Accept: application/vnd.citymunch.v4+json`
 
 The fields `geoPosition` and `gpsCoordinates` (they were the same) in restaurants objects have been renamed/combined into `geoPoint`.
 
-## `X-CM-MaxVersionSupported: 5`
+## `Accept: application/vnd.citymunch.v5+json`
 
 Each offer occurrence can now have a different start and end time, compared to the parent offer.
 
@@ -38,7 +38,7 @@ After a voucher has been reserved, it's time range can be expanded, not reduced,
 clients will continue to work with API v4 and below, but the voucher times will not always be
 correct.
 
-## `X-CM-MaxVersionSupported: 6`
+## `Accept: application/vnd.citymunch.v6+json`
 
 The offer fields `isActive`, `isRemoved`, and `isSuspended` have been merged into a single field
 called `status`. The valid status values are `INACTIVE_BY_DEFAULT`, `ACTIVE_BY_DEFAULT`, `SUSPENDED`
@@ -47,7 +47,7 @@ and `DELETED`.
 The restaurant fields `isAuthorised` and `isDeleted` have been merged into a single field called
 `status`. The valid status values are `UNAUTHORISED`, `AUTHORISED` and `DELETED`.
 
-## `X-CM-MaxVersionSupported: 7`
+## `Accept: application/vnd.citymunch.v7+json`
 
 Each offer now has a field `areGoldBonusesExcluded`. If this is true, gold bonuses (a.k.a. MunchCoins)
 cannot be used when reserving a voucher for the offer.
@@ -57,7 +57,7 @@ not be reserved with more than this number of covers.
 
 The offer field `lastDate` has been renamed to `endDate` to be consistent with other parts of the API.
 
-## `X-CM-MaxVersionSupported: 8`
+## `Accept: application/vnd.citymunch.v8+json`
 
 This is a big release, with completely new voucher types!
 
@@ -92,19 +92,19 @@ The endpoint `/vouchers/search/own-active-or-recently-active` has been removed e
 
 The endpoint `/vouchers/search/own-first-voucher` has been removed entirely.
 
-## `X-CM-MaxVersionSupported: 9`
+## `Accept: application/vnd.citymunch.v9+json`
 
 The structure of the endpoint `/restaurants/search/authorised-restaurants` has changed under
 the `allActiveOffers` key.
 
-## `X-CM-MaxVersionSupported: 10`
+## `Accept: application/vnd.citymunch.v10+json`
 
 The restaurant field `cuisineType` field has been renamed to `primaryTag`, and a *new* `cuisineType`
 field has been added. A `businessType` field has also been added.
 
 In versions 9 and below, the restaurant's "primary tag" will continue to serialize as `cuisineType`.
 
-## `X-CM-MaxVersionSupported: 11`
+## `Accept: application/vnd.citymunch.v11+json`
 
 The voucher field `seatsReserved` field has been renamed to `coversReserved`.
 
