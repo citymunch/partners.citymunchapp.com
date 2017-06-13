@@ -108,4 +108,27 @@ In versions 9 and below, the restaurant's "primary tag" will continue to seriali
 
 The voucher field `seatsReserved` field has been renamed to `coversReserved`.
 
+## `Accept: application/vnd.citymunch.v12+json`
+
+Offers can now have different "types":
+
+* `PERCENT_OFF_ANY_FOOD` - a traditional CityMunch offer, with a `startDate`, `endDate`, `startTime`,
+    `endTime`, and `totalDiscount`.
+
+* `PERCENT_OFF_SPECIFIC_ITEM` - for example "40% off pizzas, every day from 2pm-9pm" - has the
+    new field `itemName` and optionally `priceBeforeDiscount`.
+
+* `STOCK_CLEARANCE` - for example "70% off pizzas only until 9pm" - has the
+    new field `itemName` and optionally `priceBeforeDiscount`. These offers have a high minimum
+    discount (70%).
+
+There is a new voucher type:
+
+* `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` - for example "20% off any burrito" - has the usual fields
+    `date`, `startTime`, `endTime` and `discount`, and additonally `itemName` and optionally
+    `priceBeforeDiscount`.
+
+In API v11 and below, only offers with type `PERCENT_OFF_ANY_FOOD` will be visible, and vouchers
+with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
+
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->

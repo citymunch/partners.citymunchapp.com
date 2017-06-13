@@ -65,7 +65,7 @@ CityMunch as "MunchCoins".
 
 All requests must have an `Accept` header, which indicates what version of the API
 your client supports. See the [changelog]({{< relref "getting-started.md" >}}). The newest API
-version is **11**, so new clients should send the header `Accept: application/vnd.citymunch.v11+json`.
+version is **12**, so new clients should send the header `Accept: application/vnd.citymunch.v12+json`.
 
 Non-partner developers may simply call the API without identifying their client.
 
