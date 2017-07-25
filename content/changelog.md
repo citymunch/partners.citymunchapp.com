@@ -131,4 +131,12 @@ There is a new voucher type:
 In API v11 and below, only offers with type `PERCENT_OFF_ANY_FOOD` will be visible, and vouchers
 with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
 
+## `Accept: application/vnd.citymunch.v13+json`
+
+**Changes made to internal APIs only.**
+
+CONSUMER_GROUP code types are now CONSUMER_SUB_GROUP. In API v12 and below, the type will continue to be serialized as CONSUMER_GROUP.
+
+Consumer groups changed to be parents of new "consumer sub-groups".
+
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
