@@ -38,8 +38,8 @@ to auto-generate code in your favourite language, using a tool like
 
 ## Terminology
 
-**User**: a person who has an involvment with CityMunch. Each user has a **role**, which describes
-what type of user they are. The role may be **CONSUMER** (a user who can reserve and redeem vouchers)
+**User**: a person who has an involvement with CityMunch. Each user has a **role**, which describes
+what type of user they are. The role may be **CONSUMER** (a user who can search for offers and reserve vouchers)
 or **MERCHANT** (a user who works for a restaurant).
 
 **Restaurant**: A food place, which could be a restaurant, cafe, deli, street van, or other type of
@@ -67,11 +67,11 @@ All requests must have an `Accept` header, which indicates what version of the A
 your client supports. See the [changelog]({{< relref "getting-started.md" >}}). The newest API
 version is **12**, so new clients should send the header `Accept: application/vnd.citymunch.v12+json`.
 
-Non-partner developers may simply call the API without identifying their client.
-
-Partner developers must should an `Authorization` header with the value
+Partner developers must send an `Authorization` header with the value
 `Authorization: Partner [API_KEY]`. Your API key can be retrieved from your partner portal. If your
 API key becomes compromised, you must notify us immediately so we can blacklist it.
+
+Non-partner developers may simply call the API without identifying their client.
 
 After a user has logged in via your client, you will be given a token that uniquely identifies the
 user. Send the header `Authorization: User [TOKEN]` with all requests after the user has logged in.
