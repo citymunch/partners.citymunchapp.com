@@ -3,59 +3,62 @@ title: "Changelog"
 weight: 30
 ---
 
-This page lists the breaking changes that came with each API version change. API clients must send a
-header called `Accept` with a value in the format `application/vnd.citymunch.v123+json`, where `123`
-represents what version your client supports.
-
+This page lists the breaking changes that came with each API version change.
 This page doesn't list non-breaking changes, such as fields or endpoints being added.
+
+API clients must send a header called `Accept` with a value in the format `application/vnd.citymunch.v123+json`,
+where `123` represents what version your client supports.
 
 New API clients must be built using the latest API version.
 
-## `Accept: application/vnd.citymunch.v2+json`
+<!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
-`/offer/search-hints` response has changed from arrays of strings to arrays of objects - each object
-has a name string and ID string.
+## `Accept: application/vnd.citymunch.v13+json`
 
-## `Accept: application/vnd.citymunch.v3+json`
+**Changes made to internal APIs only.**
 
-The field `offerInfo` in offer objects has been renamed to `occurrences`.
+CONSUMER_GROUP code types are now CONSUMER_SUB_GROUP. In API v12 and below, the type will continue to be serialized as CONSUMER_GROUP.
 
-## `Accept: application/vnd.citymunch.v4+json`
+Consumer groups changed to be parents of new "consumer sub-groups".
 
-The fields `geoPosition` and `gpsCoordinates` (they were the same) in restaurants objects have been renamed/combined into `geoPoint`.
+## `Accept: application/vnd.citymunch.v12+json`
 
-## `Accept: application/vnd.citymunch.v5+json`
+Offers can now have different "types":
 
-Each offer occurrence can now have a different start and end time, compared to the parent offer.
+* `PERCENT_OFF_ANY_FOOD` - a traditional CityMunch offer, with a `startDate`, `endDate`, `startTime`,
+    `endTime`, and `totalDiscount`.
 
-Each offer occurrence, within the object `offer.occurrences`, may now have a `startTime` and
-`endTime` field. If either of these are null, assume the parent offer's start or end time.
+* `PERCENT_OFF_SPECIFIC_ITEM` - for example "40% off pizzas, every day from 2pm-9pm" - has the
+    new field `itemName` and optionally `priceBeforeDiscount`.
 
-The fields `voucher.startTime` and `voucher.endTime` should now be used when displaying a voucher's
-start and end time, instead of `offer.startTime` and `offer.endTime`.
+* `STOCK_CLEARANCE` - for example "70% off pizzas only until 9pm" - has the
+    new field `itemName` and optionally `priceBeforeDiscount`. These offers have a high minimum
+    discount (70%).
 
-After a voucher has been reserved, it's time range can be expanded, not reduced, so existing
-clients will continue to work with API v4 and below, but the voucher times will not always be
-correct.
+There is a new voucher type:
 
-## `Accept: application/vnd.citymunch.v6+json`
+* `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` - for example "20% off any burrito" - has the usual fields
+    `date`, `startTime`, `endTime` and `discount`, and additonally `itemName` and optionally
+    `priceBeforeDiscount`.
 
-The offer fields `isActive`, `isRemoved`, and `isSuspended` have been merged into a single field
-called `status`. The valid status values are `INACTIVE_BY_DEFAULT`, `ACTIVE_BY_DEFAULT`, `SUSPENDED`
-and `DELETED`.
+In API v11 and below, only offers with type `PERCENT_OFF_ANY_FOOD` will be visible, and vouchers
+with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
 
-The restaurant fields `isAuthorised` and `isDeleted` have been merged into a single field called
-`status`. The valid status values are `UNAUTHORISED`, `AUTHORISED` and `DELETED`.
+## `Accept: application/vnd.citymunch.v11+json`
 
-## `Accept: application/vnd.citymunch.v7+json`
+The voucher field `seatsReserved` field has been renamed to `coversReserved`.
 
-Each offer now has a field `areGoldBonusesExcluded`. If this is true, gold bonuses (a.k.a. MunchCoins)
-cannot be used when reserving a voucher for the offer.
+## `Accept: application/vnd.citymunch.v10+json`
 
-Each offer now has a field `maximumCoversPerVoucher`. If this is non-null, voucher reservations may
-not be reserved with more than this number of covers.
+The restaurant field `cuisineType` field has been renamed to `primaryTag`, and a *new* `cuisineType`
+field has been added. A `businessType` field has also been added.
 
-The offer field `lastDate` has been renamed to `endDate` to be consistent with other parts of the API.
+In versions 9 and below, the restaurant's "primary tag" will continue to serialize as `cuisineType`.
+
+## `Accept: application/vnd.citymunch.v9+json`
+
+The structure of the endpoint `/restaurants/search/authorised-restaurants` has changed under
+the `allActiveOffers` key.
 
 ## `Accept: application/vnd.citymunch.v8+json`
 
@@ -92,51 +95,48 @@ The endpoint `/vouchers/search/own-active-or-recently-active` has been removed e
 
 The endpoint `/vouchers/search/own-first-voucher` has been removed entirely.
 
-## `Accept: application/vnd.citymunch.v9+json`
+## `Accept: application/vnd.citymunch.v7+json`
 
-The structure of the endpoint `/restaurants/search/authorised-restaurants` has changed under
-the `allActiveOffers` key.
+Each offer now has a field `areGoldBonusesExcluded`. If this is true, gold bonuses (a.k.a. MunchCoins)
+cannot be used when reserving a voucher for the offer.
 
-## `Accept: application/vnd.citymunch.v10+json`
+Each offer now has a field `maximumCoversPerVoucher`. If this is non-null, voucher reservations may
+not be reserved with more than this number of covers.
 
-The restaurant field `cuisineType` field has been renamed to `primaryTag`, and a *new* `cuisineType`
-field has been added. A `businessType` field has also been added.
+The offer field `lastDate` has been renamed to `endDate` to be consistent with other parts of the API.
 
-In versions 9 and below, the restaurant's "primary tag" will continue to serialize as `cuisineType`.
+## `Accept: application/vnd.citymunch.v6+json`
 
-## `Accept: application/vnd.citymunch.v11+json`
+The offer fields `isActive`, `isRemoved`, and `isSuspended` have been merged into a single field
+called `status`. The valid status values are `INACTIVE_BY_DEFAULT`, `ACTIVE_BY_DEFAULT`, `SUSPENDED`
+and `DELETED`.
 
-The voucher field `seatsReserved` field has been renamed to `coversReserved`.
+The restaurant fields `isAuthorised` and `isDeleted` have been merged into a single field called
+`status`. The valid status values are `UNAUTHORISED`, `AUTHORISED` and `DELETED`.
 
-## `Accept: application/vnd.citymunch.v12+json`
+## `Accept: application/vnd.citymunch.v5+json`
 
-Offers can now have different "types":
+Each offer occurrence can now have a different start and end time, compared to the parent offer.
 
-* `PERCENT_OFF_ANY_FOOD` - a traditional CityMunch offer, with a `startDate`, `endDate`, `startTime`,
-    `endTime`, and `totalDiscount`.
+Each offer occurrence, within the object `offer.occurrences`, may now have a `startTime` and
+`endTime` field. If either of these are null, assume the parent offer's start or end time.
 
-* `PERCENT_OFF_SPECIFIC_ITEM` - for example "40% off pizzas, every day from 2pm-9pm" - has the
-    new field `itemName` and optionally `priceBeforeDiscount`.
+The fields `voucher.startTime` and `voucher.endTime` should now be used when displaying a voucher's
+start and end time, instead of `offer.startTime` and `offer.endTime`.
 
-* `STOCK_CLEARANCE` - for example "70% off pizzas only until 9pm" - has the
-    new field `itemName` and optionally `priceBeforeDiscount`. These offers have a high minimum
-    discount (70%).
+After a voucher has been reserved, it's time range can be expanded, not reduced, so existing
+clients will continue to work with API v4 and below, but the voucher times will not always be
+correct.
 
-There is a new voucher type:
+## `Accept: application/vnd.citymunch.v4+json`
 
-* `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` - for example "20% off any burrito" - has the usual fields
-    `date`, `startTime`, `endTime` and `discount`, and additonally `itemName` and optionally
-    `priceBeforeDiscount`.
+The fields `geoPosition` and `gpsCoordinates` (they were the same) in restaurants objects have been renamed/combined into `geoPoint`.
 
-In API v11 and below, only offers with type `PERCENT_OFF_ANY_FOOD` will be visible, and vouchers
-with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
+## `Accept: application/vnd.citymunch.v3+json`
 
-## `Accept: application/vnd.citymunch.v13+json`
+The field `offerInfo` in offer objects has been renamed to `occurrences`.
 
-**Changes made to internal APIs only.**
+## `Accept: application/vnd.citymunch.v2+json`
 
-CONSUMER_GROUP code types are now CONSUMER_SUB_GROUP. In API v12 and below, the type will continue to be serialized as CONSUMER_GROUP.
-
-Consumer groups changed to be parents of new "consumer sub-groups".
-
-<!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
+`/offer/search-hints` response has changed from arrays of strings to arrays of objects - each object
+has a name string and ID string.
