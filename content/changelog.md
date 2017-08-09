@@ -13,6 +13,12 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v14+json`
+
+**Changes made to internal APIs only.**
+
+The field `nextStepDownToday` has been changed to a map called `nextStepDowns`.
+
 ## `Accept: application/vnd.citymunch.v13+json`
 
 **Changes made to internal APIs only.**
