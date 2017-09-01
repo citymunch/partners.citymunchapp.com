@@ -13,6 +13,13 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v15+json`
+
+The (optional) field `itemName` in offers has been split into two fields, `shortItemName` and `longItemName`.
+The short name has max 12 characters and the long name has max 20 characters.
+In API versions 14 and below, the `shortItemName` will continue to be serialized as `itemName`, and `longItemName`
+will not be serialized.
+
 ## `Accept: application/vnd.citymunch.v14+json`
 
 **Changes made to internal APIs only.**
