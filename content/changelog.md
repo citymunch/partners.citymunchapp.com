@@ -13,6 +13,13 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v16+json`
+
+**Changes made to internal APIs only.**
+
+A short code type `MARKETING` has been added. In API versions 15 and below, these will be
+serialized as the almost-identical type `CONSUMER`.
+
 ## `Accept: application/vnd.citymunch.v15+json`
 
 The (optional) field `itemName` in offers has been split into two fields, `shortItemName` and `longItemName`.
