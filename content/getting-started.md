@@ -5,7 +5,7 @@ weight: 10
 
 ## Are you a business? Contact us to discuss
 
-Anyone looking to offer eating out deals to their users in London and/or Bristol, please get in touch! Examples of the kinds of firms we partner with are:
+Anyone looking to offer eating out deals to their users in London, Bristol and/or Manchester, please get in touch! Examples of the kinds of firms we partner with are:
 
 * Large corporates looking to reward employees
 * Specialist employee benefits providers
