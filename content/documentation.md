@@ -65,7 +65,7 @@ CityMunch as "MunchCoins".
 
 All requests must have an `Accept` header, which indicates what version of the API
 your client supports. See the [changelog]({{< relref "getting-started.md" >}}). The newest API
-version is **15**, so new clients should send the header `Accept: application/vnd.citymunch.v15+json`.
+version is **17**, so new clients should send the header `Accept: application/vnd.citymunch.v17+json`.
 
 Partner developers must send an `Authorization` header with the value
 `Authorization: Partner [API_KEY]`. Your API key can be retrieved from your partner portal. If your

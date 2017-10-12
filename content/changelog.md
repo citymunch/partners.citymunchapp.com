@@ -13,6 +13,12 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v17+json`
+
+**Changes made to internal APIs only.**
+
+The restaurant field `isPremium` has been renamed to `isAllowedToSetExclusions`.
+
 ## `Accept: application/vnd.citymunch.v16+json`
 
 **Changes made to internal APIs only.**
@@ -64,6 +70,9 @@ There is a new voucher type:
 In API v11 and below, only offers with type `PERCENT_OFF_ANY_FOOD` will be visible, and vouchers
 with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
 
+## Versions 11 and below are no longer supported, so the changes are not listed
+
+<!--
 ## `Accept: application/vnd.citymunch.v11+json`
 
 The voucher field `seatsReserved` field has been renamed to `coversReserved`.
@@ -160,3 +169,4 @@ The field `offerInfo` in offer objects has been renamed to `occurrences`.
 
 `/offer/search-hints` response has changed from arrays of strings to arrays of objects - each object
 has a name string and ID string.
+-->
