@@ -13,6 +13,15 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v18+json`
+
+The field `walkingDistance` has been renamed to `travelDistance`.
+
+The endpoint `GET /restaurants/walking-distances` has been deprecated and replaced by `GET /restaurants/travel-distances`.
+
+Instead of seeing how long it takes to walk to a restaurant, users can now choose to get travel time by driving, or simply
+see the distance in kilometers or miles.
+
 ## `Accept: application/vnd.citymunch.v17+json`
 
 **Changes made to internal APIs only.**
