@@ -6,4 +6,4 @@ set -o nounset
 set -o errexit
 
 hugo
-rsync -raz public/ cm-static-sites:/var/www/partners.citymunchapp.com/
+aws s3 sync public/ "s3://partners.citymunchapp.com" --acl public-read --cache-control 'max-age=86400'
