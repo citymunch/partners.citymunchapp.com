@@ -58,6 +58,7 @@ CONSUMER_GROUP code types are now CONSUMER_SUB_GROUP. In API v12 and below, the 
 
 Consumer groups changed to be parents of new "consumer sub-groups".
 
+<!--
 ## `Accept: application/vnd.citymunch.v12+json`
 
 Offers can now have different "types":
@@ -83,7 +84,6 @@ with type `PERCENT_OFF_SPECIFIC_ITEM_ON_DATE` will not be visible.
 
 ## Versions 11 and below are no longer supported, so the changes are not listed
 
-<!--
 ## `Accept: application/vnd.citymunch.v11+json`
 
 The voucher field `seatsReserved` field has been renamed to `coversReserved`.
