@@ -4,7 +4,7 @@ type: index
 weight: 0
 ---
 
-The CityMunch API lets you access hundreds of discounts at top restaurants, food trucks and delis. We connect your users with 300 places in London, Bristol, Manchester and Bath, offering them simple money-off vouchers which they redeem on arrival.
+The CityMunch API lets you access hundreds of discounts at top restaurants, food trucks and delis. We connect your users with 300 places in London, Bristol and Manchester, offering them simple money-off vouchers which they redeem on arrival.
 
 Our platform allows you and the restaurants to choose each other. As long as their consumer offer fits whatever requirements you have, they can chop and change their offer profile in real time, giving them flexibility and allowing us to offer your users access to a great selection of places.
 
