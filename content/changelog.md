@@ -13,6 +13,12 @@ New API clients must be built using the latest API version.
 
 <!-- When documenting a new version, remember to update the latest version number in `documentation.md`. -->
 
+## `Accept: application/vnd.citymunch.v19+json`
+
+**Changes made to internal APIs only.**
+
+The field `isVerificationRequired` within consumer sub-groups has been changed to an enum field, `verificationMethod`. Valid values at the moment are `NONE` and `CLICK_EMAILED_LINK`.
+
 ## `Accept: application/vnd.citymunch.v18+json`
 
 The field `walkingDistance` has been renamed to `travelDistance`.
